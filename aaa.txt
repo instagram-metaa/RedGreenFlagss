@@ -1,0 +1,116 @@
+{
+            "question": "Jika pasanganmu tidak pernah meminta maaf setelah bertengkar, bagaimana kamu menyikapinya?",
+            "options": ["Membicarakan pentingnya saling memaafkan", "Menunggu mereka meminta maaf terlebih dahulu", "Mengabaikan dan melanjutkan hubungan seperti biasa", "Menerima karena merasa itu tidak masalah"],
+            "weights": [1, 2, 3, 4],  // Red flag weights
+            "type": "redflag"
+        },
+        {
+            "question": "Jika pasanganmu selalu mendukung pilihan hidupmu, bagaimana kamu merespon?",
+            "options": ["Menghargai dan menunjukkan dukungan yang sama", "Merasa bahagia karena mereka mendukung", "Menerima dukungan tanpa memberikan respon balik", "Mengabaikan dukungan mereka karena merasa tidak perlu"],
+            "weights": [4, 3, 2, 1],  // Green flag weights
+            "type": "greenflag"
+        },
+        {
+            "question": "Jika pasanganmu tidak menghargai waktu yang kamu berikan, apa yang kamu lakukan?",
+            "options": ["Berbicara tentang pentingnya saling menghargai waktu", "Menerima tanpa banyak protes", "Mengabaikan dan melanjutkan hubungan tanpa perubahan", "Meninggalkan mereka untuk beberapa waktu untuk menunjukkan rasa tidak dihargai"],
+            "weights": [1, 2, 3, 4],  // Red flag weights
+            "type": "redflag"
+        },
+        {
+            "question": "Jika kamu merasa cemas tentang sesuatu, bagaimana pasanganmu menyikapinya?",
+            "options": ["Memberikan dukungan dan mencoba menenangkan kamu", "Mengabaikan perasaanmu karena merasa itu tidak penting", "Menyalahkan kamu karena merasa cemas", "Tidak mengetahui bagaimana cara merespons"],
+            "weights": [4, 3, 2, 1],  // Green flag weights
+            "type": "greenflag"
+        },
+        {
+            "question": "Jika kamu merasa tidak puas dengan hubungan, apa yang kamu lakukan?",
+            "options": ["Membicarakan masalah tersebut dan mencari solusi bersama", "Mengabaikan dan berharap itu akan berubah dengan waktu", "Mencari kebahagiaan di luar hubungan", "Mengakhiri hubungan tanpa berbicara lebih lanjut"],
+            "weights": [1, 2, 3, 4],  // Red flag weights
+            "type": "redflag"
+        },
+
+        {
+            "question": "Jika pasanganmu mengungkapkan ketidaknyamanan mereka tentang sesuatu yang kamu lakukan, apa yang kamu lakukan?",
+            "options": ["Mendengarkan dan berusaha memperbaiki perilakumu", "Menyalahkan pasangan karena tidak menyukai perbuatanmu", "Mengabaikan perasaan mereka dan terus melakukan hal yang sama", "Menerima dan tidak berubah karena merasa tidak masalah"],
+            "weights": [4, 3, 2, 1],  // Green flag weights
+            "type": "greenflag"
+        },
+        {
+            "question": "Jika pasanganmu sering terlambat atau tidak menghargai janji, bagaimana kamu menyikapinya?",
+            "options": ["Berbicara tentang pentingnya saling menghormati janji", "Menerima tanpa banyak protes", "Mengabaikan dan melanjutkan hubungan tanpa perubahan", "Menghindari janji-janjian dengan mereka lagi"],
+            "weights": [1, 2, 3, 4],  // Red flag weights
+            "type": "redflag"
+        },
+        {
+            "question": "Jika pasanganmu selalu mengutamakan kebahagiaanmu, bagaimana kamu merespon?",
+            "options": ["Mengutamakan kebahagiaan mereka juga", "Merasa terharu dan berterima kasih", "Menganggapnya biasa saja", "Merasa canggung dan tidak tahu bagaimana membalasnya"],
+            "weights": [4, 3, 2, 1],  // Green flag weights
+            "type": "greenflag"
+        },
+        {
+            "question": "Jika pasanganmu merasa cemburu setiap kali kamu berinteraksi dengan orang lain, bagaimana kamu menyikapinya?",
+            "options": ["Berbicara tentang pentingnya kepercayaan dalam hubungan", "Menghindari berinteraksi dengan orang lain", "Menerima dan membiarkan mereka merasa cemburu", "Menghadapi mereka dengan marah karena merasa tidak nyaman"],
+            "weights": [1, 2, 3, 4],  // Red flag weights
+            "type": "redflag"
+        },
+        {
+            "question": "Jika pasanganmu selalu menghargai ruang pribadimu, bagaimana kamu merespon?",
+            "options": ["Menghargai ruang pribadi mereka juga", "Merasa nyaman dan tidak terganggu", "Menganggapnya biasa saja", "Merasa cemas karena tidak cukup dekat"],
+            "weights": [4, 3, 2, 1],  // Green flag weights
+            "type": "greenflag"
+        },
+    
+
+    // Add more questions here...
+    {
+        "question": "Jika pasanganmu selalu terlambat memberikan perhatian atau mendukungmu, bagaimana kamu akan menghadapinya?",
+        "options": ["Membicarakan perasaanmu secara langsung", "Mengabaikannya dan tetap melanjutkan hubungan", "Mencari perhatian di tempat lain", "Menjauhkan diri untuk memberi pelajaran"],
+        "weights": [1, 2, 3, 4],  // Red flag weights
+        "type": "redflag"
+    },
+    {
+        "question": "Jika pasanganmu membuat keputusan besar tanpa melibatkanmu dan kamu merasa tidak dihargai, apa yang akan kamu lakukan?",
+        "options": ["Mengajak diskusi dan menjelaskan perasaanmu", "Menerima saja karena itu keputusan mereka", "Menuntut agar pasangan selalu melibatkanmu", "Menghindar dan tidak membahasnya lagi"],
+        "weights": [4, 3, 2, 1],  // Green flag weights
+        "type": "greenflag"
+    },
+    {
+        "question": "Jika pasanganmu merasa sangat cemburu dan mulai membatasi kebebasanmu, apa yang akan kamu lakukan?",
+        "options": ["Mencari cara untuk berbicara dan menjelaskan perasaanmu", "Menerima saja karena mereka sayang", "Melakukan apa yang mereka inginkan untuk menghindari konflik", "Menjauh dan mengakhiri hubungan"],
+        "weights": [1, 2, 3, 4],  // Red flag weights
+        "type": "redflag"
+    },
+    {
+        "question": "Jika pasanganmu selalu mengkritik dan tidak memberikan solusi atas masalah yang ada, bagaimana kamu merespon?",
+        "options": ["Membicarakan dengan jujur tentang dampak kritik tersebut", "Mengabaikan kritik dan mencoba memperbaiki sendiri", "Menuntut mereka untuk berhenti mengkritik", "Mencari cara untuk mendapatkan dukungan dari orang lain"],
+        "weights": [4, 3, 2, 1],  // Green flag weights
+        "type": "greenflag"
+    },
+
+    {
+        "question": "Jika pasanganmu sering kali mengabaikan waktu yang kamu rencanakan bersama, bagaimana kamu menghadapinya?",
+        "options": ["Berbicara langsung dan menyampaikan perasaanmu", "Menerima dan menunggu kesempatan berikutnya", "Mencari kegiatan lain agar tidak merasa kecewa", "Mengakhiri hubungan karena merasa tidak dihargai"],
+        "weights": [1, 2, 3, 4],  // Red flag weights
+        "type": "redflag"
+    },
+
+    {
+        "question": "Jika pasanganmu menghadapi kesulitan emosional dan membutuhkan dukungan, bagaimana kamu menunjukkan dukunganmu?",
+        "options": ["Memberi perhatian lebih dan menawarkan bantuan yang mereka butuhkan", "Menunggu mereka untuk meminta bantuan terlebih dahulu", "Menyarankan mereka untuk mengatasi masalah sendiri", "Mengabaikan karena merasa itu bukan masalahmu"],
+        "weights": [4, 3, 2, 1],  // Green flag weights
+        "type": "greenflag"
+    },
+
+    {
+        "question": "Jika pasanganmu memiliki kebiasaan tidak jujur, bagaimana kamu menyikapinya?",
+        "options": ["Berbicara terbuka tentang pentingnya kejujuran dalam hubungan", "Mengabaikan dan berharap mereka berubah dengan waktu", "Melakukan hal yang sama dan berbohong juga", "Mengakhiri hubungan karena tidak bisa mempercayai lagi"],
+        "weights": [1, 2, 3, 4],  // Red flag weights
+        "type": "redflag"
+    },
+    
+    {
+        "question": "Jika pasanganmu ingin mengejar impian yang besar, namun kamu merasa khawatir, apa yang akan kamu lakukan?",
+        "options": ["Memberikan dukungan penuh dan berbicara tentang kekhawatiranmu", "Menghalangi dan mencoba membuat mereka merasa lebih aman", "Mengabaikan kekhawatiranmu dan membiarkan mereka mengikuti impian", "Mendukung secara pasif tanpa berkomentar"],
+        "weights": [4, 3, 2, 1],  // Green flag weights
+        "type": "greenflag"
+    }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Flag Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz.css">
+
+</head>
+<body>
+    <div class="container">
+        <div id="userInfoContainer"></div>
+
+        <div id="quiz">
+            <div class="question">
+                <h2 class="question-text" id="questionText">Berapa kali kamu mengabaikan chat pasangan dalam seminggu?</h2>
+                <div class="options">
+                    <div class="option" data-value="1">0-1 kali</div>
+                    <div class="option" data-value="2">2-3 kali</div>
+                    <div class="option" data-value="3">4-5 kali</div>
+                    <div class="option" data-value="4">Lebih dari 5 kali</div>
+                </div>
+            </div>
+            <div class="progress" id="progressText">Pertanyaan 1 dari 5</div>
+        </div>
+        <div id="result" style="display: none;">
+            <img id="resultImage" src="" alt="Red Flag Type" class="result-image">
+            <div class="result-title" id="resultTitle"></div>
+            <div class="result-subtitle" id="resultSubtitle"></div>
+            
+            <div class="result-description" id="resultDescription"></div>
+            
+            <div class="detail-list" id="resultDetails">
+                <div class="detail-item">
+                    <div class="detail-icon">💡</div>
+                    Tipe Kamu
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🚩</div>
+                    Pola Perilaku
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">❤️</div>
+                    Saran Perbaikan
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn retry-btn" id="downloadBtn">Download Hasil</button>
+                <button class="btn retry-btn" id="retryBtn">Ulangi Tes</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

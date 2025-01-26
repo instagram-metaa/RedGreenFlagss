@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Flag Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .input-field.error {
+            border: 2px solid red;
+            background-color: #d11111;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🚩</div>
+        <h1 class="title">Red Flag Generator</h1>
+        
+        <div class="input-group">
+            <input type="text" id="nameInput" class="input-field" placeholder="Masukkan Nama">
+        </div>
+        
+        <div class="input-group">
+            <input type="date" id="birthdateInput" class="input-field">
+        </div>
+        
+        <button id="generateBtn" class="start-btn">Cek Red Flag</button>
+        
+        <p class="disclaimer">Hanya untuk hiburan. Jangan terlalu serius! 😄</p>
+    </div>
+
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const nameInput = document.getElementById('nameInput');
+            const birthdateInput = document.getElementById('birthdateInput');
+            const name = nameInput.value.trim();
+            const birthdate = birthdateInput.value.trim();
+            
+            // Reset error state
+            nameInput.classList.remove('error');
+            birthdateInput.classList.remove('error');
+
+            // Validasi input
+            let isValid = true;
+
+            if (!name) {
+                nameInput.classList.add('error'); // Tambah efek error
+                isValid = false;
+            }
+            if (!birthdate) {
+                birthdateInput.classList.add('error'); // Tambah efek error
+                isValid = false;
+            }
+
+            // Jika input tidak valid, hentikan proses
+            if (!isValid) {
+                return;
+            }
+
+            // Simpan data ke localStorage
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userBirthDate', birthdate);
+            
+            // Redirect ke halaman quiz.html
+            window.location.href = 'quiz.html';
+        });
+    </script>
+</body>
+</html>
