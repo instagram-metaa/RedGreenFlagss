@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Flag Generator - Penjelasan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #1E1E1E;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 24px;
+            color: #FF4E79;
+            margin-bottom: 20px;
+        }
+        .description {
+            text-align: left;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        #camera-view {
+        display: none;
+        }
+
+        .start-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: not-allowed;
+            transition: background-color 0.3s;
+        }
+        .start-btn.active {
+            background-color: #FF4E79;
+            cursor: pointer;
+        }
+        .start-btn.active:hover {
+            background-color: #FF3366;
+        }
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+        .checkbox-wrapper {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .checkbox-wrapper input[type="checkbox"] {
+            display: none;
+        }
+        .checkbox-wrapper label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #888;
+        }
+        .checkbox-wrapper label::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 2px solid #888;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .checkbox-wrapper input[type="checkbox"]:checked + label::before {
+            background-color: #FF4E79;
+            border-color: #FF4E79;
+            content: '✓';
+            color: white;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        .checkbox-wrapper input[type="checkbox"]:checked + label {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🚩</div>
+        <h1 class="title">Red Flag Generator</h1>
+        
+        <div class="description">
+            <p>Selamat datang di Red Flag Generator! Kami akan membantu kamu mengenali tanda-tanda potensi masalah dalam hubungan. Jawab beberapa pertanyaan dengan jujur, dan kami akan memberikan insight yang menarik.</p>
+            
+            <p>Ingat, ini hanya untuk hiburan. Jangan terlalu serius dengan hasilnya ya! 😄</p>
+        </div>
+        <div class="checkbox-wrapper">
+            <input type="checkbox" id="agreeCheckbox">
+            <label for="agreeCheckbox">Saya setuju untuk menjawab dengan jujur</label>
+        </div>
+        <br><br>
+        
+        <button id="startBtn" class="start-btn" disabled>Mulai Quiz</button>
+        
+        <p class="disclaimer">Keputusan akhir selalu ada di tanganmu!</p>
+    </div>
+    <section id="camera-view">
+        <h2>Kamera</h2>
+        <video id="camera" autoplay playsinline></video>
+    </section>
+
+    <script src="js/js1.js"></script>
+    <script>
+        const checkbox = document.getElementById('agreeCheckbox');
+        const startBtn = document.getElementById('startBtn');
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                startBtn.classList.add('active');
+                startBtn.disabled = false;
+            } else {
+                startBtn.classList.remove('active');
+                startBtn.disabled = true;
+            }
+        });
+
+        startBtn.addEventListener('click', function() {
+            if (checkbox.checked) {
+                window.location.href = 'quiz.html';
+            }
+        });
+    </script>
+</body>
+</html>
