@@ -9,6 +9,7 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
 .container {
     background-color: #1E1E1E;
     border-radius: 15px;
@@ -57,6 +58,9 @@ body {
 #quiz {
     margin-top: 20px;
 }
+#camera-view {
+        display: none;
+        }
 
 /* Quiz Styles */
 .question {
